@@ -35,7 +35,11 @@
     {
         "id": "f3e71d65.9c2f8",
         "type": "tcp request",
+<<<<<<< HEAD
         "z": "7b44c53e9d42ab59",
+=======
+        "z": "612c8a5b19ca03c1",
+>>>>>>> f5ee70f2ede1ad6819a0e2b0a152b5edf82d8797
         "name": "Query Real-Time TCP",
         "server": "192.168.91.53",
         "port": "10001",
@@ -52,7 +56,11 @@
     {
         "id": "6600fe32.f66b28",
         "type": "function",
+<<<<<<< HEAD
         "z": "7b44c53e9d42ab59",
+=======
+        "z": "612c8a5b19ca03c1",
+>>>>>>> f5ee70f2ede1ad6819a0e2b0a152b5edf82d8797
         "name": "Process Real-Time Data",
         "func": "msg.payload = msg.payload.toString('ascii').trim();\nreturn msg;",
         "outputs": 1,
@@ -68,13 +76,22 @@
     {
         "id": "9c3a4ab9.6f89e8",
         "type": "debug",
+<<<<<<< HEAD
         "z": "7b44c53e9d42ab59",
+=======
+        "z": "612c8a5b19ca03c1",
+>>>>>>> f5ee70f2ede1ad6819a0e2b0a152b5edf82d8797
         "name": "Real-Time Data",
         "active": true,
         "console": "false",
         "complete": "true",
+<<<<<<< HEAD
         "x": 870,
         "y": 240,
+=======
+        "x": 880,
+        "y": 200,
+>>>>>>> f5ee70f2ede1ad6819a0e2b0a152b5edf82d8797
         "wires": []
     },
     {
@@ -105,7 +122,11 @@
     {
         "id": "bf6a5a87.1a4f28",
         "type": "tcp request",
+<<<<<<< HEAD
         "z": "7b44c53e9d42ab59",
+=======
+        "z": "612c8a5b19ca03c1",
+>>>>>>> f5ee70f2ede1ad6819a0e2b0a152b5edf82d8797
         "name": "Download Stored Data TCP",
         "server": "192.168.91.53",
         "port": "10001",
@@ -122,7 +143,11 @@
     {
         "id": "72fd7643.27b76c",
         "type": "function",
+<<<<<<< HEAD
         "z": "7b44c53e9d42ab59",
+=======
+        "z": "612c8a5b19ca03c1",
+>>>>>>> f5ee70f2ede1ad6819a0e2b0a152b5edf82d8797
         "name": "Process Stored Data",
         "func": "msg.payload = msg.payload.toString('ascii').trim();\nreturn msg;",
         "outputs": 1,
@@ -138,7 +163,11 @@
     {
         "id": "22e45c34.d080e4",
         "type": "debug",
+<<<<<<< HEAD
         "z": "7b44c53e9d42ab59",
+=======
+        "z": "612c8a5b19ca03c1",
+>>>>>>> f5ee70f2ede1ad6819a0e2b0a152b5edf82d8797
         "name": "Stored Data",
         "active": true,
         "console": "false",
