@@ -1,0 +1,150 @@
+[
+    {
+        "id": "00f1fbddc93ba240",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b1ec9f1f.d1eb88",
+        "type": "inject",
+        "z": "00f1fbddc93ba240",
+        "name": "Query Real-Time Data1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "timestamp",
+        "payloadType": "date",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "f3e71d65.9c2f8"
+            ]
+        ]
+    },
+    {
+        "id": "f3e71d65.9c2f8",
+        "type": "tcp request",
+        "z": "00f1fbddc93ba240",
+        "name": "Query Real-Time TCP",
+        "server": "192.168.91.53",
+        "port": "10001",
+        "out": "single",
+        "splitc": "false",
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "6600fe32.f66b28"
+            ]
+        ]
+    },
+    {
+        "id": "6600fe32.f66b28",
+        "type": "function",
+        "z": "00f1fbddc93ba240",
+        "name": "Process Real-Time Data",
+        "func": "msg.payload = msg.payload.toString('ascii').trim();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "9c3a4ab9.6f89e8"
+            ]
+        ]
+    },
+    {
+        "id": "9c3a4ab9.6f89e8",
+        "type": "debug",
+        "z": "00f1fbddc93ba240",
+        "name": "Real-Time Data",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 810,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c1b9b7b0.9f88f8",
+        "type": "inject",
+        "z": "00f1fbddc93ba240",
+        "name": "Download Stored Data1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "timestamp",
+        "payloadType": "date",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "bf6a5a87.1a4f28"
+            ]
+        ]
+    },
+    {
+        "id": "bf6a5a87.1a4f28",
+        "type": "tcp request",
+        "z": "00f1fbddc93ba240",
+        "name": "Download Stored Data TCP",
+        "server": "192.168.91.53",
+        "port": "10001",
+        "out": "single",
+        "splitc": "false",
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "72fd7643.27b76c"
+            ]
+        ]
+    },
+    {
+        "id": "72fd7643.27b76c",
+        "type": "function",
+        "z": "00f1fbddc93ba240",
+        "name": "Process Stored Data",
+        "func": "msg.payload = msg.payload.toString('ascii').trim();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "22e45c34.d080e4"
+            ]
+        ]
+    },
+    {
+        "id": "22e45c34.d080e4",
+        "type": "debug",
+        "z": "00f1fbddc93ba240",
+        "name": "Stored Data",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 810,
+        "y": 280,
+        "wires": []
+    }
+]
