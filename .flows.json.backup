@@ -81,7 +81,7 @@
         "id": "c1b9b7b0.9f88f8",
         "type": "inject",
         "z": "612c8a5b19ca03c1",
-        "name": "Download Stored Data2#",
+        "name": "Download Stored Data2",
         "props": [
             {
                 "p": "payload"
@@ -94,7 +94,7 @@
         "topic": "",
         "payload": "timestamp",
         "payloadType": "date",
-        "x": 210,
+        "x": 200,
         "y": 280,
         "wires": [
             [
